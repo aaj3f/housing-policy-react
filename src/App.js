@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import UserForm from './components/userForm'
 import './App.css';
 
 class App extends Component {
   render() {
-    return("Hello World")
+    return(
+      <UserForm user={this.props.user}/>
+    )
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return(
+    { user: state.userReducer.user }
+  )
+}
+
+export default connect(mapStateToProps)(App);
