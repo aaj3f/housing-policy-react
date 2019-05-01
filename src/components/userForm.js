@@ -11,10 +11,10 @@ class UserForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.createUser(this.state);
+    this.setState({ user: { zipcode: '', salary: '', rent_cost: '', utilities: '', bedrooms: ''}})
   }
 
   render() {
-    console.log(this.state)
     return(
       <Container id="formContainer">
         <Form onSubmit={this.handleSubmit}>

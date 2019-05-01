@@ -7,7 +7,10 @@ const createUser = (state) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(state)
-    })
+    }).then(resp => resp.json())
+      .then(json => {
+        console.log(json)
+      })
   }
 }
 
