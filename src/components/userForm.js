@@ -28,7 +28,8 @@ class UserForm extends Component {
       rent_costValid: false,
       utilitiesValid: false
     },
-    formErrors: {zipcode: '', salary: '', rent_cost: '', utilities: ''}
+    formErrors: {zipcode: '', salary: '', rent_cost: '', utilities: ''},
+    valid: true
   }
 
   validateField = (fieldName, value) => {
@@ -91,11 +92,11 @@ class UserForm extends Component {
     // if (form.checkValidity() === false) {
     //   event.stopPropagation();
     // }
-    if (Object.values(this.state.validations).every(value => value === true)) {
+    if (Object.values(this.state.validations).every(value => value === true) && Object.values(this.state.user).every(value => value.length > 0)) {
       this.props.createUser(this.state);
-      this.setState({ user: { zipcode: '', salary: '', rent_cost: '', utilities: '', bedrooms: ''}, formErrors: {zipcode: '', salary: '', rent_cost: '', utilities: ''}})
+      this.setState({ user: { zipcode: '', salary: '', rent_cost: '', utilities: '', bedrooms: ''}, formErrors: {zipcode: '', salary: '', rent_cost: '', utilities: ''}, valid: true })
     } else {
-      alert("Please confirm that all form elements are valid.")
+      this.setState({ ...this.state, valid: false })
     }
   }
   //
@@ -110,7 +111,7 @@ class UserForm extends Component {
       <Container id="formContainer">
         <Form noValidate onSubmit={this.handleSubmit}>
           <Row>
-            <Col>
+            <Col xs={12} md={6}>
               <Form.Group controlId="zipcode">
                 <Form.Label>Zip Code</Form.Label>
                 <Form.Control
@@ -129,7 +130,7 @@ class UserForm extends Component {
                 <Form.Control.Feedback type="invalid">{this.state.formErrors.zipcode}</Form.Control.Feedback>
               </Form.Group>
             </Col>
-            <Col>
+            <Col xs={12} md={6}>
               <Form.Group controlId="salary">
                 <Form.Label>Estimated Income</Form.Label>
                 <InputGroup>
@@ -154,7 +155,7 @@ class UserForm extends Component {
           </Row>
 
           <Row>
-            <Col>
+            <Col xs={12} md={4}>
               <Form.Group controlId="rentCost">
                 <Form.Label>Monthly Rent Cost</Form.Label>
                 <InputGroup>
@@ -175,7 +176,7 @@ class UserForm extends Component {
                 </InputGroup>
               </Form.Group>
             </Col>
-            <Col>
+            <Col xs={12} md={4}>
               <Form.Group controlId="utilities">
                 <Form.Label>Monthly Utilities Cost</Form.Label>
                 <InputGroup>
@@ -186,7 +187,7 @@ class UserForm extends Component {
                     type="text"
                     name="utilities"
                     className={this.state.formErrors.utilities ? (this.state.validations.utilitiesValid ? 'is-valid' : 'is-invalid') : ''}
-                    placeholder="(e.g. water, electricity, etc.)"
+                    placeholder="(water, electric, etc.)"
                     aria-describedby="UtilitiesPrepend"
                     value={this.state.user.utilities}
                     onChange={this.handleChange}
@@ -196,7 +197,7 @@ class UserForm extends Component {
                 </InputGroup>
               </Form.Group>
             </Col>
-            <Col>
+            <Col xs={12} md={4}>
               <Form.Group controlId="bedrooms">
                 <Form.Label># of Bedrooms Rented</Form.Label>
                 <Form.Control
@@ -214,12 +215,25 @@ class UserForm extends Component {
             </Col>
           </Row>
 
-          <Button
+          <Row className="justify-content-md-left align-items-center">
+            <Col xs={4} >
+              <Form.Group controlID="submit" className="mb-0">
+                <Form.Control
+                  type="submit"
+                  className="btn btn-primary"
+                  value="Submit"/>
+              </Form.Group>
+            </Col>
+            <Col>
+              <div className={this.state.valid ? "invalid-feedback" : "invalid-feedback d-block my-0"}><p className="mb-0">Please complete the form with valid inputs.</p></div>
+            </Col>
+          </Row>
+          {/* <Button
             variant="primary"
             disabled={!Object.values(this.state.validations).every(value => value === true)}
             type="submit">
             Submit
-          </Button>
+          </Button> */}
         </Form>
       </Container>
     )
