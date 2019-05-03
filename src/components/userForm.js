@@ -76,8 +76,13 @@ class UserForm extends Component {
   handleChange = event => {
     const name = event.target.name;
     const value = event.target.value
-    this.setState({ user: { ...this.state.user, [name]: value }},
-      () => { this.validateField(name, value); console.log(this.state) })
+    this.setState({ ...this.state, user: { ...this.state.user, [name]: value }, formErrors: { ...this.state.formErrors, [name]: '' }})
+  }
+
+  handleBlur = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.validateField(name, value)
   }
 
   handleSubmit = event => {
@@ -88,7 +93,7 @@ class UserForm extends Component {
     // }
     if (Object.values(this.state.validations).every(value => value === true)) {
       this.props.createUser(this.state);
-      this.setState({ user: { zipcode: '', salary: '', rent_cost: '', utilities: '', bedrooms: ''}})
+      this.setState({ user: { zipcode: '', salary: '', rent_cost: '', utilities: '', bedrooms: ''}, formErrors: {zipcode: '', salary: '', rent_cost: '', utilities: ''}})
     } else {
       alert("Please confirm that all form elements are valid.")
     }
@@ -115,6 +120,7 @@ class UserForm extends Component {
                   placeholder="Enter your zip code here..."
                   value={this.state.user.zipcode}
                   onChange={this.handleChange}
+                  onBlur={this.handleBlur}
                   required/>
                 {this.state.formErrors.zipcode ? null : <Form.Text className="text-muted">
                   We don't share personal information with anyone.
@@ -138,6 +144,7 @@ class UserForm extends Component {
                     aria-describedby="SalaryPrepend"
                     value={this.state.user.salary}
                     onChange={this.handleChange}
+                    onBlur={this.handleBlur}
                     required/>
                   <Form.Control.Feedback type="valid">Looks Good!</Form.Control.Feedback>
                   <Form.Control.Feedback type="invalid">{this.state.formErrors.salary}</Form.Control.Feedback>
@@ -161,7 +168,8 @@ class UserForm extends Component {
                     placeholder="Ex. 800"
                     aria-describedby="RentCostPrepend"
                     value={this.state.user.rent_cost}
-                    onChange={this.handleChange} required/>
+                    onChange={this.handleChange}
+                    onBlur={this.handleBlur} required/>
                   <Form.Control.Feedback type="valid">Looks Good!</Form.Control.Feedback>
                   <Form.Control.Feedback type="invalid">{this.state.formErrors.rent_cost}</Form.Control.Feedback>
                 </InputGroup>
@@ -181,7 +189,8 @@ class UserForm extends Component {
                     placeholder="(e.g. water, electricity, etc.)"
                     aria-describedby="UtilitiesPrepend"
                     value={this.state.user.utilities}
-                    onChange={this.handleChange} required/>
+                    onChange={this.handleChange}
+                    onBlur={this.handleBlur} required/>
                   <Form.Control.Feedback type="valid">Looks Good!</Form.Control.Feedback>
                   <Form.Control.Feedback type="invalid">{this.state.formErrors.utilities}</Form.Control.Feedback>
                 </InputGroup>
@@ -205,7 +214,10 @@ class UserForm extends Component {
             </Col>
           </Row>
 
-          <Button variant="primary" type="submit">
+          <Button
+            variant="primary"
+            disabled={!Object.values(this.state.validations).every(value => value === true)}
+            type="submit">
             Submit
           </Button>
         </Form>
