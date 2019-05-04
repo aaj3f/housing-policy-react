@@ -31,6 +31,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgba(39, 66, 153, 1);
 }
 
 body {
@@ -108,6 +109,12 @@ h6 {
   font-weight: 800;
 }
 
+#formContainer {
+  border-radius: 2em;
+  padding: 4em 2em;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .masthead {
   min-height: 30rem;
   position: relative;
@@ -116,25 +123,49 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("./img/bg-masthead.jpg");
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("./img/bg-masthead.jpg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("./img/david-becker-676886-unsplash.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("./img/david-becker-676886-unsplash.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .masthead h1 {
+  color: rgba(255, 255, 255, 0.8);
   font-size: 4rem;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 992px) {
+  #formContainer {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
   .masthead {
     height: 100vh;
   }
   .masthead h1 {
     font-size: 5.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .masthead {
+    padding-top: 3em;
+  }
+}
+
+@media (max-width: 576px) {
+  #formContainer {
+    padding: 1em;
+    max-width: 90%;
+  }
+
+  .masthead {
+    padding-top: 2em;
   }
 }
 

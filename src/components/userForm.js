@@ -141,7 +141,7 @@ class UserForm extends Component {
                     type="text"
                     name="salary"
                     className={this.state.formErrors.salary ? (this.state.validations.salaryValid ? 'is-valid' : 'is-invalid') : ''}
-                    placeholder="Enter your annual income (before taxes)..."
+                    placeholder="Annual Income (before taxes)..."
                     aria-describedby="SalaryPrepend"
                     value={this.state.user.salary}
                     onChange={this.handleChange}
@@ -215,8 +215,8 @@ class UserForm extends Component {
             </Col>
           </Row>
 
-          <Row className="justify-content-md-left align-items-center">
-            <Col xs={4} >
+          <Row className="justify-content-md-center align-items-center">
+            <Col xs={{ span: 6, offset: 3 }} >
               <Form.Group controlID="submit" className="mb-0">
                 <Form.Control
                   type="submit"
