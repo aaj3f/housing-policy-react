@@ -5,10 +5,12 @@ import UserForm from '../components/userForm'
 class FormContainer extends Component {
   render() {
     return(
-      <container className="container text-center my-auto">
-        <FormHeader />
-        <UserForm user={this.props.user}/>
-      </container>
+      <header className="d-flex masthead">
+        <div className="container text-center my-auto">
+          <FormHeader />
+          <UserForm user={this.props.user}/>
+        </div>
+      </header>
     )
   }
 }

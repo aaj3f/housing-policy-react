@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import FormContainer from './containers/formContainer'
 import LoadingContainer from './containers/loadingContainer'
+import UserContainer from './containers/userContainer'
 import './App.css';
 
 class App extends Component {
@@ -12,14 +13,12 @@ class App extends Component {
     } else if (this.props.loading) {
       return(<LoadingContainer />)
     } else {
-      return(<FormContainer user={this.props.user}/>)
+      return(<UserContainer />)
     }
   }
   render() {
     return(
-      <header className="d-flex masthead">
-        {this.displayLogic()}
-      </header>
+      this.displayLogic()
     )
   }
 }

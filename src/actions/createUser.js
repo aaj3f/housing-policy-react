@@ -9,7 +9,7 @@ const createUser = (state) => {
       body: JSON.stringify(state)
     }).then(resp => resp.json())
       .then(json => {
-        console.log(json)
+        dispatch({ type: "LOADED_USER", payload: json })
       })
   }
 }

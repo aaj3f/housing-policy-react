@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 // import { Field, reduxForm } from 'redux-form'
 import createUser from '../actions/createUser'
-import { Container, Form, InputGroup, Button, Row, Col } from 'react-bootstrap'
+import { Container, Form, InputGroup, Row, Col } from 'react-bootstrap'
 
 // const schema = yup.object({
 //   zipcode: yup.string().length(5).required(),
@@ -70,6 +70,8 @@ class UserForm extends Component {
         break;
       case "utilities":
         checkNumericalInput(fieldName, value);
+        break;
+      default:
         break;
     }
   }
@@ -217,7 +219,7 @@ class UserForm extends Component {
 
           <Row className="justify-content-md-center align-items-center">
             <Col xs={{ span: 6, offset: 3 }} >
-              <Form.Group controlID="submit" className="mb-0">
+              <Form.Group className="mb-0">
                 <Form.Control
                   type="submit"
                   className="btn btn-primary"

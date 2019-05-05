@@ -31,7 +31,11 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(39, 66, 153, 1);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("./img/david-becker-676886-unsplash.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("./img/david-becker-676886-unsplash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
@@ -123,11 +127,6 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("./img/david-becker-676886-unsplash.jpg");
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("./img/david-becker-676886-unsplash.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .masthead h1 {
