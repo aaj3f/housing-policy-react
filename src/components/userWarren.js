@@ -21,7 +21,9 @@ class UserWarren extends Component {
         this policy would pay the 3.5% downpayment on your home for you, qualifying you for FHA protections on your mortgage.</p>
       )
     } else {
-
+      return(
+        <p className="mb-0"><br/>Elizabeth Warren's policy would only provide benefits for those making less than 120% the average income in their area.<br/><br/>To learn more about her proposed policy, click here.</p>
+      )
     }
   }
 
