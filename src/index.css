@@ -136,10 +136,21 @@ h6 {
   padding: 0;
 }
 
+
+#portfolio {
+  background-color: rgb(248, 249, 250);
+}
+
 @media (min-width: 992px) {
   #formContainer {
     width: 80%;
   }
+}
+
+@media (max-width: 992px) {
+  .portfolio-item span.caption {
+    background-color: rgba(29, 128, 159, 0.6);
+  }  
 }
 
 @media (min-width: 768px) {
@@ -316,7 +327,7 @@ h6 {
 }
 
 .portfolio-item .caption .caption-content h2 {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 
@@ -330,6 +341,7 @@ h6 {
     max-width: none;
     margin: 0;
   }
+
   .portfolio-item .caption {
     -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
     -webkit-clip-path: inset(0px);
@@ -346,6 +358,7 @@ h6 {
     -webkit-transition: -webkit-clip-path 0.25s ease-out;
     -webkit-clip-path: inset(-1px);
     clip-path: inset(-1px);
+    filter: none;
   }
   .portfolio-item:hover img {
     -webkit-clip-path: inset(2rem);
