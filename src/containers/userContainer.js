@@ -5,6 +5,10 @@ import LoadingDisplay from '../components/loadingDisplay'
 
 class UserContainer extends Component {
 
+  componentDidMount() {
+
+  }
+
   renderMain = () => {
     let { warren, booker, harris } = this.props.user
     let h2, p
@@ -30,7 +34,7 @@ class UserContainer extends Component {
     return(
       <section className="content-section" id="portfolio">
         <div className="container">
-          {this.props.loading ? <LoadingDisplay /> : <UserData user={this.props.user} />}
+          <UserData user={this.props.user} />
         </div>
       </section>
     )
@@ -39,7 +43,8 @@ class UserContainer extends Component {
 
 const mapStateToProps = state => {
   return({
-    user: state.userReducer.user
+    user: state.userReducer.user,
+    loading: state.userReducer.loading
   })
 }
 

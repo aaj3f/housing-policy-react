@@ -6,19 +6,11 @@ import './App.css';
 
 class App extends Component {
 
-  displayLogic = () => {
-    if (Object.keys(this.props.user).length === 0 && !this.props.loading) {
-      return(null)
-    } else {
-      return(<UserContainer />)
-    }
-  }
-
   render() {
     return(
       <div>
-        <FormContainer user={this.props.user} />
-        {this.displayLogic()}
+        <FormContainer />
+        {Object.keys(this.props.user).length === 0 ? null : <UserContainer />}
       </div>
     )
   }
@@ -26,8 +18,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return({
-    user: state.userReducer.user,
-    loading: state.userReducer.loading })
+    user: state.userReducer.user })
 }
 
 export default connect(mapStateToProps)(App);
