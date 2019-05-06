@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 
 class UserData extends Component {
 
+  componentDidMount() {
+    setTimeout(() => {
+      document.querySelector('#portfolio').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth'})
+    }, 1000)
+  }
+
   renderMain = () => {
     let { warren, booker, harris } = this.props.user
     let h2, p
@@ -67,6 +73,7 @@ class UserData extends Component {
             <img className="img-fluid" src={require("../img/harris.jpg")} alt="" />
           </a>
         </div>
+        <div id="bottom-el"></div>
       </div>
     )
   }
