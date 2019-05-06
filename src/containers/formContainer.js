@@ -10,6 +10,7 @@ class FormContainer extends Component {
           <FormHeader />
           <UserForm user={this.props.user}/>
         </div>
+        <div className="overlay"></div>
       </header>
     )
   }
