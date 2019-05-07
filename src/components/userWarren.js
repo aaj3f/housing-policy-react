@@ -13,16 +13,11 @@ class UserWarren extends Component {
   renderP = () => {
     if (this.props.user.warren) {
       return(
-        <p className="mb-0">If you would be
-        <ul>
-          <li>a first-time homebuyer</li>
-          <li>looking to purchase a home in a low-income or historically red-lined neighborhood</li>
-        </ul>
-        this policy would pay the 3.5% downpayment on your home for you, qualifying you for FHA protections on your mortgage.</p>
+        <p className="mb-0">If you would be<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) a first-time homebuyer<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) purchasing a home in a low-income or<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;historically red-lined neighborhood<br/>this policy would pay the 3.5% downpayment on your home for you, qualifying you for FHA protections on your mortgage.</p>
       )
     } else {
       return(
-        <p className="mb-0"><br/>Elizabeth Warren's policy would only provide benefits for those making less than 120% the average income in their area.<br/><br/>To learn more about her proposed policy, click here.</p>
+        <p className="mb-0"><br/>Elizabeth Warren's policy would only provide benefits for those making less than 120% the average income in their area.<br/><br/>To learn why else you might not qualify, or to<br/>read more about her proposed policy, click here</p>
       )
     }
   }

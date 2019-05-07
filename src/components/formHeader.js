@@ -4,7 +4,7 @@ class FormHeader extends Component {
 
   render() {
     return(
-        <h1>Policy 4 Me</h1>
+        <h1>Witty Name</h1>
     )
   }
 }

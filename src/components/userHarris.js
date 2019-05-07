@@ -10,13 +10,17 @@ class UserHarris extends Component {
     }
   }
 
-  // renderP = () => {
-  //   if () {
-  //     return()
-  //   } else {
-  //
-  //   }
-  // }
+  renderP = () => {
+    if (this.props.user.harrisCredit) {
+      return(
+        <p className="mb-0">Kamala Harris' proposed policy would provide you with an annual tax credit of<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(this.props.user.harrisCredit) * 12}<br/>to help make the cost of rent more affordable for you.</p>
+      )
+    } else {
+      return(
+        <p className="mb-0"><br/>Kamala Harris' policy would only provide benefits for those making less than $100,000/yr (or $125,000 in certain metropolitan areas).<br/><br/>To learn why else you might not qualify, or to<br/>read more about her proposed policy, click here</p>
+      )
+    }
+  }
 
   render() {
     return(
@@ -25,7 +29,7 @@ class UserHarris extends Component {
           <span className="caption">
             <span className="caption-content">
               {this.renderH2()}
-              <p className="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+              {this.renderP()}
             </span>
           </span>
           <img className="img-fluid" src={require("../img/harris.jpg")} alt="" />

@@ -18,7 +18,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return({
-    user: state.userReducer.user })
+    user: state.userReducer.user
+  })
 }
 
 export default connect(mapStateToProps)(App);
