@@ -80,13 +80,17 @@ class UserForm extends Component {
 
   handleChange = event => {
     const name = event.target.name;
-    const value = event.target.value
+    const value = this.calculateNum(event.target.value)
     this.setState({ ...this.state, user: { ...this.state.user, [name]: value }, formErrors: { ...this.state.formErrors, [name]: '' }})
   }
 
+  displayNum = num => num.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
+  calculateNum = string => string.replace(/\,/g, '')
+
   handleBlur = event => {
     const name = event.target.name;
-    const value = event.target.value;
+    const value = this.calculateNum(event.target.value);
     this.validateField(name, value)
   }
 
@@ -147,7 +151,7 @@ class UserForm extends Component {
                     className={this.state.formErrors.salary ? (this.state.validations.salaryValid ? 'is-valid' : 'is-invalid') : ''}
                     placeholder="Annual Income (before taxes)..."
                     aria-describedby="SalaryPrepend"
-                    value={this.state.user.salary}
+                    value={this.displayNum(this.state.user.salary)}
                     onChange={this.handleChange}
                     onBlur={this.handleBlur}
                     required/>
@@ -172,7 +176,7 @@ class UserForm extends Component {
                     className={this.state.formErrors.rent_cost ? (this.state.validations.rent_costValid ? 'is-valid' : 'is-invalid') : ''}
                     placeholder="Ex. 800"
                     aria-describedby="RentCostPrepend"
-                    value={this.state.user.rent_cost}
+                    value={this.displayNum(this.state.user.rent_cost)}
                     onChange={this.handleChange}
                     onBlur={this.handleBlur} required/>
                   <Form.Control.Feedback type="valid">Looks Good!</Form.Control.Feedback>
@@ -193,7 +197,7 @@ class UserForm extends Component {
                     className={this.state.formErrors.utilities ? (this.state.validations.utilitiesValid ? 'is-valid' : 'is-invalid') : ''}
                     placeholder="(water, electric, etc.)"
                     aria-describedby="UtilitiesPrepend"
-                    value={this.state.user.utilities}
+                    value={this.displayNum(this.state.user.utilities)}
                     onChange={this.handleChange}
                     onBlur={this.handleBlur} required/>
                   <Form.Control.Feedback type="valid">Looks Good!</Form.Control.Feedback>
