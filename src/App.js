@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import FormContainer from './containers/formContainer'
-import UserContainer from './containers/userContainer'
+import Home from './containers/homeContainer'
 import './App.css';
-
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
 class App extends Component {
 
   render() {
+    debugger;
     return(
-      <div>
-        <FormContainer />
-        {Object.keys(this.props.user).length === 0 ? null : <UserContainer />}
-      </div>
+      // <Navbar></Navbar>
+      // {this.renderMain()}
+      // <Router>
+      //   <React.fragment>
+      //     {/* <Navbar></Navbar> */}
+      //     {/* <Route exact path='/' component={About} /> */}
+      //     <Route path='/home' component={Home} />
+      //
+      //   </React.fragment>
+      // </Router>
+      <Home />
     )
   }
 }
 
-const mapStateToProps = state => {
-  return({
-    user: state.userReducer.user
-  })
-}
-
-export default connect(mapStateToProps)(App);
+export default App;
