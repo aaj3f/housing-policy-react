@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 // import { Field, reduxForm } from 'redux-form'
 import createUser from '../actions/createUser'
 import { Container, Form, InputGroup, Row, Col } from 'react-bootstrap'
+import zipObject from '../zipcodes'
 
 // const schema = yup.object({
 //   zipcode: yup.string().length(5).required(),
@@ -38,7 +39,8 @@ class UserForm extends Component {
         this.setState({
           ...this.state,
           validations: { ...this.state.validations, [fieldName + 'Valid']: false },
-          formErrors: { ...this.state.formErrors, [fieldName]: 'Please only include digits 0-9'}})
+          formErrors: { ...this.state.formErrors, [fieldName]: 'Please only include digits 0-9'}
+        })
       } else {
         this.setState({
           ...this.state,
@@ -49,7 +51,7 @@ class UserForm extends Component {
     }
     switch (fieldName) {
       case "zipcode":
-        if (/[^\d]/.test(value) || !(value.length === 5)) {
+        if (/[^\d]/.test(value) || !(value.length === 5) || !(zipObject[value])) {
           this.setState({
             ...this.state,
             validations: { ...this.state.validations, zipcodeValid: false },
