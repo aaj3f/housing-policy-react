@@ -5,7 +5,6 @@ import './App.css';
 class App extends Component {
 
   render() {
-    debugger;
     return(
       // <Navbar></Navbar>
       // {this.renderMain()}

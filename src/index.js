@@ -15,8 +15,9 @@ let store = createStore(rootReducer, applyMiddleware(thunk))
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={About} />
       <Route path="/about" component={About} />
+      <Route path="/home" component={App} />
     </Router>
   </Provider>, document.getElementById('root'));
 
