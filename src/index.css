@@ -177,6 +177,23 @@ div.about {
   font-weight: bold;
 }
 
+.main-caption h2 {
+  margin-bottom: 2em;
+}
+
+.portfolio-item .caption .caption-content.main-caption p {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.portfolio-item .caption .caption-content h2.sub-caption {
+  font-size: 1.1em;
+}
+
+.portfolio-item .caption .caption-content p {
+  margin-block-start: 0em;
+}
+
 @media (min-width: 992px) {
   #formContainer {
     width: 80%;
