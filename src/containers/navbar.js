@@ -44,17 +44,11 @@ class NavBar extends Component {
           <li onClick={this.handleLinkClick} className="sidebar-nav-item">
             <Link to='/home' className="js-scroll-trigger">Home</Link>
           </li>
-          {/* <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#services">Services</a>
-        </li>
-        <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-      </li>
-      <li class="sidebar-nav-item">
-      <a class="js-scroll-trigger" href="#contact">Contact</a>
-    </li> */}
-      </ul>
-    </nav>
+          <li onClick={this.handleLinkClick} className="sidebar-nav-item">
+            <Link to='/policy' className="js-scroll-trigger">Policy Information</Link>
+          </li>
+        </ul>
+      </nav>
     </>
     )
   }
