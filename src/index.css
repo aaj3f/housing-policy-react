@@ -172,6 +172,11 @@ div.about {
   background-color: rgb(248, 249, 250);
 }
 
+.emphatic-font {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
 @media (min-width: 992px) {
   #formContainer {
     width: 80%;

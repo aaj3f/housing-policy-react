@@ -13,11 +13,12 @@ class UserWarren extends Component {
   renderP = () => {
     if (this.props.user.warren) {
       return(
-        <p className="mb-0">If you would be<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) a first-time homebuyer<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) purchasing a home in a low-income or<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;historically red-lined neighborhood<br/>this policy would pay the 3.5% downpayment on your home for you, qualifying you for FHA protections on your mortgage.</p>
+        // <p className="mb-0">If you would be<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) a first-time homebuyer<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) purchasing a home in a low-income or<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;historically red-lined neighborhood<br/>this policy would pay the 3.5% downpayment on your home for you, qualifying you for FHA protections on your mortgage.</p>
+        <p className="mb-0">Warren's policy would offer first-time homebuyers a government-paid downpayment of up to:<br/><br/><span className="emphatic-font">3.5% of the property value</span><br/><br/>Click here to learn more.</p>
       )
     } else {
       return(
-        <p className="mb-0"><br/>Elizabeth Warren's policy would only provide benefits for those making less than 120% the average income in their area.<br/><br/>To learn why else you might not qualify, or to<br/>read more about her proposed policy, click here</p>
+        <p className="mb-0"><br/>Warren's policy would only provide benefits for those making less than 120% the average income in their area.<br/><br/>To learn why else you might not qualify, or to<br/>read more about her proposed policy, click here</p>
       )
     }
   }
