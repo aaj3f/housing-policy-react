@@ -530,6 +530,14 @@ a:hover, a:focus, a:active {
   background-color: #1D809F !important;
 }
 
+.bg-policies-footer {
+  background-color: rgb(246, 189, 26) !important;
+}
+
+h3#footer-secondary {
+  color: #1D809F;
+}
+
 .text-primary {
   color: #1D809F !important;
 }
