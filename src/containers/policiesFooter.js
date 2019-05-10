@@ -3,6 +3,20 @@ import { connect } from 'react-redux'
 
 class PoliciesFooter extends Component {
 
+  scrollViewportDown() {
+    setTimeout(() => {
+      document.querySelector('#policies-footer').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth'})
+    }, 1000)
+  }
+
+  componentDidMount() {
+    this.scrollViewportDown()
+  }
+
+  componentDidUpdate() {
+    this.scrollViewportDown()
+  }
+
   renderH3 = () => {
     let h3
     switch (this.props.match.params.policyId) {

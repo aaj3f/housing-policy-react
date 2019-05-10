@@ -18,13 +18,11 @@ let store = createStore(rootReducer, applyMiddleware(thunk))
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <ScrollToTop>
-        <Route path="/" component={NavBar}/>
-        <Route exact path="/" component={About} />
-        <Route path="/about" component={About} />
-        <Route path="/home" component={App} />
-        <Route path="/policies" component={PoliciesContainer} />
-      </ScrollToTop>
+      <Route path="/" component={NavBar}/>
+      <Route exact path="/" component={About} />
+      <Route path="/about" component={About} />
+      <Route path="/home" component={App} />
+      <Route path="/policies" component={PoliciesContainer} />
     </Router>
   </Provider>, document.getElementById('root'));
 

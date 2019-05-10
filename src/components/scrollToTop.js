@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
 class ScrollToTop extends Component {
-  componentDidUpdate() {
+  componentDidMount() {
     window.scrollTo({
       top: 0,
       left: 0,
@@ -11,8 +11,8 @@ class ScrollToTop extends Component {
   }
 
   render() {
-    return this.props.children
+    return null
   }
 }
 
-export default withRouter(ScrollToTop)
+export default ScrollToTop
