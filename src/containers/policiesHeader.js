@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 class PoliciesHeader extends Component {
 
   renderHeader = () => {
     if (Object.keys(this.props.user).length === 0) {
       return(
-        <h1>No User Here!</h1>
+        <div className="container text-center">
+          <h2 className="mx-auto mb-5">For Personalized Information About Your Neighborhood,<br/>Use Our Policy Benefits Estimator:</h2>
+          <Link to="/home" href="#" className="btn btn-xl btn-light">Let's do it!</Link>
+        </div>
       )
     } else {
       let income = this.props.user.median_income
