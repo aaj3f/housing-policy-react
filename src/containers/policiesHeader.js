@@ -34,30 +34,12 @@ class PoliciesHeader extends Component {
           <div class="row">
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
               <span class="service-icon rounded-circle mx-auto mb-3 px-2">
-                <Textfit mode="single">${displayMedianIncome}</Textfit>
-              </span>
-              <h4>
-                <strong>Median Income</strong>
-              </h4>
-              <p class="text-faded mb-0">for the {this.props.user.zipcode} area</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-              <span class="service-icon rounded-circle mx-auto mb-3 px-2">
                 <Textfit mode="single">${displayFmr}</Textfit>
               </span>
               <h4>
                 <strong>Fair Market Rent</strong>
               </h4>
               <p class="text-faded mb-0">for a {this.props.user.bedrooms}-bedroom unit</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-              <span class="service-icon rounded-circle mx-auto mb-3 px-2">
-                <Textfit mode="single">${displaySalary}</Textfit>
-              </span>
-              <h4>
-                <strong>Your Income</strong>
-              </h4>
-              <p class="text-faded mb-0">{compareIncome()}</p>
             </div>
             <div class="col-lg-3 col-md-6">
               <span class="service-icon rounded-circle mx-auto mb-3 px-2">
@@ -67,6 +49,24 @@ class PoliciesHeader extends Component {
                 <strong>Your Rent Cost</strong>
               </h4>
               <p class="text-faded mb-0">{compareRent()}</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+              <span class="service-icon rounded-circle mx-auto mb-3 px-2">
+                <Textfit mode="single">${displayMedianIncome}</Textfit>
+              </span>
+              <h4>
+                <strong>Median Income</strong>
+              </h4>
+              <p class="text-faded mb-0">for the {this.props.user.zipcode} area</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+              <span class="service-icon rounded-circle mx-auto mb-3 px-2">
+                <Textfit mode="single">${displaySalary}</Textfit>
+              </span>
+              <h4>
+                <strong>Your Income</strong>
+              </h4>
+              <p class="text-faded mb-0">{compareIncome()}</p>
             </div>
           </div>
         </div>
