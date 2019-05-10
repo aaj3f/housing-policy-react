@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PoliciesHeader from './policiesHeader'
+import PoliciesBody from './policiesBody'
 
 class PoliciesContainer extends Component {
 
   render() {
     return(
-      <h1>Policies Container</h1>
+      <React.Fragment>
+        <PoliciesHeader />
+        <PoliciesBody />
+      </React.Fragment>
     )
   }
 }
