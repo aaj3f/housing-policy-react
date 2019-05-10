@@ -6,7 +6,8 @@ import thunk from 'redux-thunk';
 import './index.css';
 import App from './App';
 import About from './containers/about';
-import NavBar from './containers/navbar'
+import NavBar from './containers/navbar';
+import PoliciesContainer from './containers/policiesContainer'
 import rootReducer from './reducers/index'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Route exact path="/" component={About} />
       <Route path="/about" component={About} />
       <Route path="/home" component={App} />
+      <Route path="/policies" component={PoliciesContainer} />
     </Router>
   </Provider>, document.getElementById('root'));
 

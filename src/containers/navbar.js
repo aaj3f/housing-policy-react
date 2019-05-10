@@ -45,7 +45,7 @@ class NavBar extends Component {
             <Link to='/home' className="js-scroll-trigger">Home</Link>
           </li>
           <li onClick={this.handleLinkClick} className="sidebar-nav-item">
-            <Link to='/policy' className="js-scroll-trigger">Policy Information</Link>
+            <Link to='/policies' className="js-scroll-trigger">Policy Information</Link>
           </li>
         </ul>
       </nav>

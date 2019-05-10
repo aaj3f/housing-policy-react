@@ -4,7 +4,9 @@ import { connect } from 'react-redux'
 class PoliciesContainer extends Component {
 
   render() {
-    return(<h1>Policies Container</h1>)
+    return(
+      <h1>Policies Container</h1>
+    )
   }
 }
 
