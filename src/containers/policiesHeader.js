@@ -29,7 +29,7 @@ class PoliciesHeader extends Component {
         <div className="container">
           <div className="content-section-heading">
             <h3 className="text-secondary mb-0">Your Data</h3>
-            <h2 className="mx-auto mb-5">Info About Your Area<br/>Retrieved from the Census Bureau & H.U.D.:</h2>
+            <h2 className="mx-auto mb-5">Info About Your Area Retrieved from<br/>The Dept of HUD & the US Census Bureau</h2>
           </div>
           <div class="row">
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
