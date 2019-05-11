@@ -18,4 +18,4 @@ The app asks users for some very basic information about where they live and the
 
 ## Contact
 
-Please feel free to [contact me by email](mailto:ajohnson.uva@gmail.com) to provide feedback or reach out about available web development positions and opportunities.
+Please feel free to contact me by email at [ajohnson.uva@gmail.com](mailto:ajohnson.uva@gmail.com) to provide feedback or reach out about available web development positions and opportunities.
