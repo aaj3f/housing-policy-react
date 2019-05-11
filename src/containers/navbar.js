@@ -36,7 +36,7 @@ class NavBar extends Component {
       <nav id="sidebar-wrapper">
         <ul className="sidebar-nav">
           <li className="sidebar-brand">
-            <a className="js-scroll-trigger" href="#page-top">[Funny App Name]</a>
+            <a className="js-scroll-trigger" href="#page-top">AFFORDABLE</a>
           </li>
           <li onClick={this.handleLinkClick} className="sidebar-nav-item">
             <Link to='/about' className="js-scroll-trigger">About</Link>
