@@ -1,10 +1,10 @@
-# AFFORDABLE
+# affordable
 
-AFFORDABLE is a responsive React/Redux SPA created by [Andrew A Johnson](https://andrewjohnson.dev) to help make affordable housing policy more accessible.
+[affordable](https://github.com/aaj3f/housing-policy-react) is a responsive React/Redux SPA created by [Andrew A Johnson](https://andrewjohnson.dev) to help make affordable housing policy more accessible.
 
 ## Preview
 
-[![AFFORDABLE preview](./src/img/affordableSS.png)](http://bit.ly/2Q30l4M)
+[![affordable preview](./src/img/affordableSS.png)](http://bit.ly/2Q30l4M)
 
 **[Development Video Demo](http://bit.ly/2Q30l4M)**
 
