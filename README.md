@@ -4,7 +4,7 @@ AFFORDABLE is a responsive React/Redux SPA created by [Andrew A Johnson](https:/
 
 ## Preview
 
-[![AFFORDABLE preview](./src/img/affordableSS.png)]
+[![AFFORDABLE preview](./src/img/affordableSS.png)](http://bit.ly/2Q30l4M)
 
 **[Development Video Demo](http://bit.ly/2Q30l4M)**
 
