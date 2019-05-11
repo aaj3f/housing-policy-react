@@ -4,7 +4,7 @@ class FormHeader extends Component {
 
   render() {
     return(
-        <h1>AFFORDABLE</h1>
+        <h1><em>affordable</em></h1>
     )
   }
 }
