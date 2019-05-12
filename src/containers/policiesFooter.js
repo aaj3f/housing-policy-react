@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UseEstimator from '../components/useEstimator'
 import { connect } from 'react-redux'
 
 class PoliciesFooter extends Component {
@@ -38,6 +39,14 @@ class PoliciesFooter extends Component {
     )
   }
 
+  renderGraph() {
+    if (Object.keys(this.props.user).length === 0) {
+      return(<UseEstimator />)
+    } else {
+      return(<h2>We have info for you! Something neat will go here!</h2>)
+    }
+  }
+
   render() {
     return(
       <section className="content-section bg-policies-footer text-white text-center" id="policies-footer">
@@ -45,6 +54,7 @@ class PoliciesFooter extends Component {
           <div className="content-section-heading">
             <h3 id="footer-secondary" className="mb-0">Policy Info</h3>
             {this.renderH2()}
+            {this.renderGraph()}
           </div>
         </div>
       </section>
@@ -52,4 +62,10 @@ class PoliciesFooter extends Component {
   }
 }
 
-export default connect()(PoliciesFooter)
+const mapStateToProps = state => {
+  return({
+    user: state.userReducer.user
+  })
+}
+
+export default connect(mapStateToProps)(PoliciesFooter)
