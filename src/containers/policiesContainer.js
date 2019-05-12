@@ -4,6 +4,7 @@ import PoliciesHeader from './policiesHeader'
 import PoliciesBody from './policiesBody'
 import PoliciesFooter from './policiesFooter'
 import ScrollToTop from '../components/scrollToTop'
+import policiesReducer from '../actions/policiesReducer'
 import { Route } from 'react-router-dom'
 
 class PoliciesContainer extends Component {
@@ -21,4 +22,10 @@ class PoliciesContainer extends Component {
   }
 }
 
-export default connect()(PoliciesContainer)
+const mapStateToProps = state => {
+  return({
+    user: state.userReducer.user
+  })
+}
+
+export default connect(mapStateToProps, { policiesReducer })(PoliciesContainer)

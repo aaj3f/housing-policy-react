@@ -4,6 +4,10 @@ import {XYPlot, LineSeries} from 'react-vis';
 
 class HarrisGraph extends Component {
 
+  componentDidMount() {
+    
+  }
+
   render() {
     return(<h2>Harris Graph</h2>)
   }
