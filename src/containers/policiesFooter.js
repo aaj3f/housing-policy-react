@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UseEstimator from '../components/useEstimator'
+import GraphContainer from './graphContainer'
 import { connect } from 'react-redux'
 
 class PoliciesFooter extends Component {
@@ -43,7 +44,7 @@ class PoliciesFooter extends Component {
     if (Object.keys(this.props.user).length === 0) {
       return(<UseEstimator />)
     } else {
-      return(<h2>We have info for you! Something neat will go here!</h2>)
+      return(<GraphContainer match={this.props.match}/>)
     }
   }
 
