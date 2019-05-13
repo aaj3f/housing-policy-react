@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../node_modules/react-vis/dist/style.css';
 import {XYPlot, LineSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis} from 'react-vis';
+import { Container, Row, Col } from 'react-bootstrap'
 
 class HarrisGraph extends Component {
 
@@ -21,13 +22,26 @@ class HarrisGraph extends Component {
       {y: userHigh.credit * 0.9}
     ]
     return(
-      <XYPlot className="mx-auto" height={400} width={400}>
-        <VerticalGridLines />
-        <HorizontalGridLines />
-        <XAxis position="middle" tickTotal="5" title="Annual Income"/>
-        <YAxis position="middle" title="Estimated Tax Credit"/>
-        <LineSeries data={data} curve={'curveMonotoneX'} />
-      </XYPlot>
+      <Row>
+        <Col>
+          <XYPlot className="mx-auto" height={400} width={400}>
+            <VerticalGridLines />
+            <HorizontalGridLines />
+            <XAxis position="middle" tickTotal="5" title="Annual Income"/>
+            <YAxis position="middle" title="Estimated Tax Credit"/>
+            <LineSeries data={data} curve={'curveMonotoneX'} />
+          </XYPlot>
+        </Col>
+        <Col>
+          <div className="mx-auto">
+            <h2>Harris' Policy Aims to Benefit:</h2>
+            <p><ul>
+              <li>This</li>
+              <li>That</li>
+            </ul></p>
+          </div>
+        </Col>
+      </Row>
     )
   }
 }
