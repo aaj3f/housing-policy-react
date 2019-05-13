@@ -21,7 +21,7 @@ class UserForm extends Component {
       salary: '',
       rent_cost: '',
       utilities: '',
-      bedrooms: ''
+      bedrooms: '0'
     },
     validations: {
       zipcodeValid: false,
@@ -96,6 +96,7 @@ class UserForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    console.log(this.state)
     // const form = event.currentTarget;
     // if (form.checkValidity() === false) {
     //   event.stopPropagation();
