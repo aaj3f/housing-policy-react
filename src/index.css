@@ -222,6 +222,15 @@ div.policies-selection {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* Graph Data */
+/* .rv-xy-plot {
+  margin: 2em;
+}
+
+.rv-xy-plot__inner {
+  margin: 3em;
+} */
+
 @media (max-width: 992px) {
   .portfolio-item span.caption {
     background-color: rgba(24, 103, 181, 0.6);

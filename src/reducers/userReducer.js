@@ -6,9 +6,8 @@ export default (state = { user: {}, loading: false, loadingPolicy: false }, acti
       return ({ user: action.payload, loading: false })
     case "LOADING_POLICY_DATA":
       return ({ ...state, loadingPolicy: true })
-    default:
     case "LOADED_POLICY":
-      return ({ ...state, user: { ...state.user, action.payload }, loadingPolicy: false })
+      return ({ ...state, user: { ...state.user, graphData: action.payload }, loadingPolicy: false })
     default:
       return state;
   }

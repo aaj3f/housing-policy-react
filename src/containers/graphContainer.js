@@ -9,11 +9,11 @@ class GraphContainer extends Component {
   renderGraph = () => {
     switch (this.props.match.params.policyId) {
       case "warren":
-        return <WarrenGraph />
+        return <WarrenGraph graphData={this.props.user.graphData.warrenGraphData} />
       case "booker":
-        return <BookerGraph />
+        return <BookerGraph graphData={this.props.user.graphData.bookerGraphData} />
       case "harris":
-        return <HarrisGraph />
+        return <HarrisGraph graphData={this.props.user.graphData.harrisGraphData} />
       default:
       return null;
     }
@@ -21,7 +21,9 @@ class GraphContainer extends Component {
 
   render() {
     return(
-      this.renderGraph()
+      <div className="content-section-heading">
+        {this.renderGraph()}
+      </div>
     )
   }
 }
