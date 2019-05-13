@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class UserWarren extends Component {
 
@@ -26,7 +27,7 @@ class UserWarren extends Component {
   render() {
     return(
       <div className="col-lg-6">
-        <a className="portfolio-item" href="#">
+        <Link to='/policies/warren' className="portfolio-item">
           <span className="caption">
             <span className="caption-content">
               {this.renderH2()}
@@ -34,7 +35,7 @@ class UserWarren extends Component {
             </span>
           </span>
           <img className="img-fluid" src={require("../img/warren.jpg")} alt="" />
-        </a>
+        </Link>
       </div>
     )
   }

@@ -8,7 +8,7 @@ import fetchPolicies from '../actions/fetchPolicies'
 import { Route } from 'react-router-dom'
 
 class PoliciesContainer extends Component {
-  
+
   componentWillMount() {
     if (Object.keys(this.props.user).length > 0) {
       this.props.fetchPolicies(this.props.user)

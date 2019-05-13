@@ -43,6 +43,8 @@ class PoliciesFooter extends Component {
   renderGraph() {
     if (Object.keys(this.props.user).length === 0) {
       return(<UseEstimator />)
+    } else if (this.props.loadingPolicy) {
+      return(<div className="content-section-heading"><h2 className="mx-auto mb-5">Loading...</h2></div>)
     } else {
       return(<GraphContainer match={this.props.match}/>)
     }
@@ -65,7 +67,8 @@ class PoliciesFooter extends Component {
 
 const mapStateToProps = state => {
   return({
-    user: state.userReducer.user
+    user: state.userReducer.user,
+    loadingPolicy: state.userReducer.loadingPolicy
   })
 }
 
