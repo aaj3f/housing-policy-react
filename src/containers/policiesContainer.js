@@ -4,10 +4,16 @@ import PoliciesHeader from './policiesHeader'
 import PoliciesBody from './policiesBody'
 import PoliciesFooter from './policiesFooter'
 import ScrollToTop from '../components/scrollToTop'
-import policiesReducer from '../actions/policiesReducer'
+import fetchPolicies from '../actions/fetchPolicies'
 import { Route } from 'react-router-dom'
 
 class PoliciesContainer extends Component {
+  
+  componentWillMount() {
+    if (Object.keys(this.props.user).length > 0) {
+      this.props.fetchPolicies(this.props.user)
+    }
+  }
 
   render() {
     // debugger;
@@ -28,4 +34,4 @@ const mapStateToProps = state => {
   })
 }
 
-export default connect(mapStateToProps, { policiesReducer })(PoliciesContainer)
+export default connect(mapStateToProps, { fetchPolicies })(PoliciesContainer)

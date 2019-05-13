@@ -16,18 +16,21 @@
 //
 // export default createUser
 
-const policiesReducer = (state) => {
+const fetchPolicies = (user) => {
   return dispatch => {
     dispatch({ type: "LOADING_POLICY_DATA" });
-    return fetch('/users/' + state.user.id, {
+    console.log(user)
+    return fetch(`/users/${user.id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
-      },
-      body: JSON.stringify(state)
+      }
     }).then(resp => resp.json())
-      .then(json => console.log(json))
+      .then(json => {
+        console.log(json)
+        dispatch({ type: "LOADED_POLICY", payload: json })
+      })
   }
 }
 
-export default policiesReducer
+export default fetchPolicies
