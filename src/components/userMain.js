@@ -28,12 +28,12 @@ class UserMain extends Component {
   render() {
     return(
       <div className="col-lg-6">
-        <a className="portfolio-item" href="#">
+        <Link to='/policies' className="portfolio-item">
           <span className="caption">
           {this.renderMain()}
           </span>
           <img className="img-fluid" src={require("../img/american-sticker.jpg")} alt="US Congress - Housing Policy" />
-        </a>
+        </Link>
       </div>
     )
   }
