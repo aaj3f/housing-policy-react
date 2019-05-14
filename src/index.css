@@ -227,6 +227,16 @@ div.policies-selection {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* Policies Footer */
+#policies-footer p {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+/* #policies-footer ul {
+
+} */
+
 /* Graph Data */
 /* .rv-xy-plot {
   margin: 2em;

@@ -19,7 +19,7 @@ class HarrisGraph extends Component {
       {x: userLow.salary * 0.9},
       {x: userHigh.salary * 1.1},
       {y: userLow.credit * 1.1},
-      {y: userHigh.credit * 0.9}
+      {y: 0 }
     ]
     return(
       <XYPlot className="mx-auto" height={400} width={400}>
