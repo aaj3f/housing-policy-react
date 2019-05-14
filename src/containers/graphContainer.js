@@ -21,9 +21,7 @@ class GraphContainer extends Component {
 
   render() {
     return(
-      <div className="content-section-heading">
-        {this.renderGraph()}
-      </div>
+        this.renderGraph()
     )
   }
 }

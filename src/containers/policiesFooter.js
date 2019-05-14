@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import UseEstimator from '../components/useEstimator'
 import GraphContainer from './graphContainer'
+import PolicySummary from './policySummary'
+import { Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 
 class PoliciesFooter extends Component {
@@ -57,7 +59,18 @@ class PoliciesFooter extends Component {
           <div className="content-section-heading">
             <h3 id="footer-secondary" className="mb-0">Policy Info</h3>
             {this.renderH2()}
-            {this.renderGraph()}
+            <div className="content-section-heading">
+              <Row>
+                <Col>
+                  {this.renderGraph()}
+                </Col>
+                <Col>
+                  <div className="mx-auto">
+                    <PolicySummary match={this.props.match}/>
+                  </div>
+                </Col>
+              </Row>
+            </div>
           </div>
         </div>
       </section>

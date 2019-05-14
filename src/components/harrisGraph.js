@@ -22,23 +22,13 @@ class HarrisGraph extends Component {
       {y: userHigh.credit * 0.9}
     ]
     return(
-      <Row>
-        <Col>
-          <XYPlot className="mx-auto" height={400} width={400}>
-            <VerticalGridLines />
-            <HorizontalGridLines />
-            <XAxis position="middle" tickTotal="5" title="Annual Income"/>
-            <YAxis position="middle" title="Estimated Tax Credit"/>
-            <LineSeries data={data} curve={'curveMonotoneX'} />
-          </XYPlot>
-        </Col>
-        <Col>
-          <div className="mx-auto">
-            <h2>Harris' Policy Aims to Benefit:</h2>
-            <p>[Policy Info Goes Here]</p>
-          </div>
-        </Col>
-      </Row>
+      <XYPlot className="mx-auto" height={400} width={400}>
+        <VerticalGridLines />
+        <HorizontalGridLines />
+        <XAxis position="middle" tickTotal="5" title="Annual Income"/>
+        <YAxis position="middle" title="Estimated Tax Credit"/>
+        <LineSeries data={data} curve={'curveMonotoneX'} />
+      </XYPlot>
     )
   }
 }
