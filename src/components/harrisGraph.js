@@ -35,10 +35,7 @@ class HarrisGraph extends Component {
         <Col>
           <div className="mx-auto">
             <h2>Harris' Policy Aims to Benefit:</h2>
-            <p><ul>
-              <li>This</li>
-              <li>That</li>
-            </ul></p>
+            <p>[Policy Info Goes Here]</p>
           </div>
         </Col>
       </Row>
