@@ -121,7 +121,7 @@ class UserForm extends Component {
         <Form noValidate onSubmit={this.handleSubmit}>
           <Row>
             <Col xs={12} md={6}>
-              <Form.Group controlId="zipcode">
+              <Form.Group controlId="zipcode" className="user-form-input-col">
                 <Form.Label>Zip Code</Form.Label>
                 <Form.Control
                   type="text"
@@ -140,7 +140,7 @@ class UserForm extends Component {
               </Form.Group>
             </Col>
             <Col xs={12} md={6}>
-              <Form.Group controlId="salary">
+              <Form.Group controlId="salary" className="user-form-input-col">
                 <Form.Label>Estimated Income</Form.Label>
                 <InputGroup>
                   <InputGroup.Prepend>
@@ -165,7 +165,7 @@ class UserForm extends Component {
 
           <Row>
             <Col xs={12} md={4}>
-              <Form.Group controlId="rentCost">
+              <Form.Group controlId="rentCost" className="user-form-input-col">
                 <Form.Label>Monthly Rent Cost</Form.Label>
                 <InputGroup>
                   <InputGroup.Prepend>
@@ -186,7 +186,7 @@ class UserForm extends Component {
               </Form.Group>
             </Col>
             <Col xs={12} md={4}>
-              <Form.Group controlId="utilities">
+              <Form.Group controlId="utilities" className="user-form-input-col">
                 <Form.Label>Monthly Utilities Cost</Form.Label>
                 <InputGroup>
                   <InputGroup.Prepend>
@@ -207,7 +207,7 @@ class UserForm extends Component {
               </Form.Group>
             </Col>
             <Col xs={12} md={4}>
-              <Form.Group controlId="bedrooms">
+              <Form.Group controlId="bedrooms" className="user-form-input-col">
                 <Form.Label># of Bedrooms Rented</Form.Label>
                 <Form.Control
                   as="select"
@@ -224,7 +224,7 @@ class UserForm extends Component {
             </Col>
           </Row>
 
-          <Row className="justify-content-md-center align-items-center">
+          <Row className="form-bottom-button justify-content-md-center align-items-center">
             <Col xs={{ span: 6, offset: 3 }} >
               <Form.Group className="mb-0">
                 <Form.Control

@@ -20,7 +20,7 @@ class FormContainer extends Component {
 
   render() {
     return(
-      <header className="d-flex masthead">
+      <header className="d-flex masthead" style={{ minHeight: "100vh" }}>
         <div className="container text-center my-auto">
           <FormHeader />
           {this.props.loading ? <LoadingDisplay /> : <UserForm user={this.props.user}/>}

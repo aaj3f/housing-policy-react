@@ -296,6 +296,14 @@ div.policies-selection {
   .masthead {
     padding-top: 2em;
   }
+
+  div.user-form-input-col {
+    margin-bottom: 0;
+  }
+
+  div.form-bottom-button {
+    margin-top: 1em;
+  }
 }
 
 /* Side Menu */
