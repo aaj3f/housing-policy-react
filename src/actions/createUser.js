@@ -9,7 +9,7 @@ const createUser = (state) => {
       body: JSON.stringify(state)
     }).then(resp => {
         if (!resp.ok) {
-          throw Error(resp);
+          throw Error(resp.json());
         } else {
           return resp.json()
         }
@@ -19,6 +19,7 @@ const createUser = (state) => {
       })
       .catch(error => {
         console.error(error)
+        console.log(error)
         dispatch({ type: "ERROR" })
       })
   }
