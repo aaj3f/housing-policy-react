@@ -8,7 +8,6 @@ import App from './App';
 import About from './containers/about';
 import NavBar from './containers/navbar';
 import PoliciesContainer from './containers/policiesContainer'
-import ScrollToTop from './components/scrollToTop'
 import rootReducer from './reducers/index'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
