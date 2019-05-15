@@ -47,7 +47,7 @@ class PoliciesFooter extends Component {
             {this.renderH2()}
             <div className="content-section-heading">
               <Row>
-                <Col>
+                <Col sm={12} lg={6} className="mb-5">
                   {this.renderGraph()}
                 </Col>
                 <Col>

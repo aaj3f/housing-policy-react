@@ -35,7 +35,7 @@ class PoliciesHeader extends Component {
               </h4>
               <p className="text-faded mb-0">for a {this.props.user.bedrooms}-bedroom unit</p>
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-3 col-md-6 mb-5">
               <span className="service-icon rounded-circle mx-auto mb-3 px-2">
                 <Textfit mode="single">${displayRentCost}</Textfit>
               </span>

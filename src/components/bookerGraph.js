@@ -63,7 +63,7 @@ class BookerGraph extends Component {
     // ]
     return(
       <React.Fragment>
-        <XYPlot className="mx-auto" height={400} width={400}>
+        <XYPlot className="mx-auto" height={400} width={350}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis position="middle" tickTotal={5} title="Annual Income"/>
