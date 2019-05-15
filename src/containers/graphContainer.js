@@ -11,9 +11,9 @@ class GraphContainer extends Component {
       case "warren":
         return <WarrenGraph graphData={this.props.user.graphData.warrenGraphData} />
       case "booker":
-        return <BookerGraph graphData={this.props.user.graphData.bookerGraphData} />
+        return <BookerGraph mainGraph={this.props.user.graphData.bookerGraphData} subGraph={this.props.user.graphData.harrisGraphData} />
       case "harris":
-        return <HarrisGraph graphData={this.props.user.graphData.harrisGraphData} />
+        return <HarrisGraph mainGraph={this.props.user.graphData.harrisGraphData} subGraph={this.props.user.graphData.bookerGraphData} />
       default:
       return null;
     }
