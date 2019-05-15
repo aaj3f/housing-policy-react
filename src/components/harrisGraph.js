@@ -52,7 +52,7 @@ class HarrisGraph extends Component {
         <MarkSeries
           strokeWidth={2}
           opacity="0.8"
-          // sizeRange={[5, 15]}
+          sizeRange={ (userHigh.flag ? [5, 15] : null) }
           data={markData}
         />
         {this.renderHint()}
