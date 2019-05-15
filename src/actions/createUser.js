@@ -7,9 +7,19 @@ const createUser = (state) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(state)
-    }).then(resp => resp.json())
+    }).then(resp => {
+        if (!resp.ok) {
+          throw Error(resp);
+        } else {
+          return resp.json()
+        }
+      })
       .then(json => {
         dispatch({ type: "LOADED_USER", payload: json })
+      })
+      .catch(error => {
+        console.error(error)
+        dispatch({ type: "ERROR" })
       })
   }
 }
