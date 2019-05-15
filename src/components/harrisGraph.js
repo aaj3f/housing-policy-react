@@ -22,6 +22,8 @@ class HarrisGraph extends Component {
         </div>
       </Hint>
       )
+    } else {
+      return null
     }
   }
 
@@ -46,7 +48,7 @@ class HarrisGraph extends Component {
 
     const ITEMS = [
       {title: 'Harris\' Policy Benefits', strokeWidth: 4, opacity: 1},
-      {title: 'Boker\'s Policy Benefits', strokeWidth: 4, strokeStyle: "dashed", opacity: "0.3"}
+      {title: 'Booker\'s Policy Benefits', strokeWidth: 4, strokeStyle: "dashed", opacity: "0.3"}
       // {title: 'Dots', color: 'url(#circles)', strokeWidth: 9},
       // {title: 'Stripes', color: 'url(#stripes)'},
       // {title: 'Wide stripes', color: 'url(#stripes)', strokeWidth: 13},

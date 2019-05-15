@@ -22,6 +22,8 @@ class BookerGraph extends Component {
         </div>
       </Hint>
       )
+    } else {
+      return null
     }
   }
 

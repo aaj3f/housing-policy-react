@@ -6,6 +6,20 @@ import HarrisGraph from '../components/harrisGraph'
 
 class GraphContainer extends Component {
 
+  scrollViewportDown() {
+    setTimeout(() => {
+      document.querySelector('#policies-footer').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth'})
+    }, 500)
+  }
+
+  componentDidMount() {
+    this.scrollViewportDown()
+  }
+
+  componentDidUpdate() {
+    this.scrollViewportDown()
+  }
+
   renderGraph = () => {
     switch (this.props.match.params.policyId) {
       case "warren":
@@ -21,7 +35,9 @@ class GraphContainer extends Component {
 
   render() {
     return(
-        this.renderGraph()
+      <div className="content-section-heading">
+        {this.renderGraph()}
+      </div>
     )
   }
 }
