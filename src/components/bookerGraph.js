@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Row } from 'react-bootstrap'
 import '../../node_modules/react-vis/dist/style.css';
-import {XYPlot, LineMarkSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, Hint} from 'react-vis';
+import {XYPlot, LineMarkSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, Hint, DiscreteColorLegend} from 'react-vis';
 
 class BookerGraph extends Component {
 
@@ -43,36 +44,51 @@ class BookerGraph extends Component {
       {x: subHigh.salary, y: subHigh.credit, size: 4},
     ]
 
+    const ITEMS = [
+      {title: 'Booker\'s Policy Benefits', strokeWidth: 4, opacity: 1},
+      {title: 'Harris\' Policy Benefits', strokeWidth: 4, strokeStyle: "dashed", opacity: "0.3"}
+      // {title: 'Dots', color: 'url(#circles)', strokeWidth: 9},
+      // {title: 'Stripes', color: 'url(#stripes)'},
+      // {title: 'Wide stripes', color: 'url(#stripes)', strokeWidth: 13},
+      // {title: 'Normal', color: 'purple'},
+      // {title: 'Wide', color: 'powderblue', strokeWidth: 6},
+    ];
+
     // const markData = [
     //   {x: userLow.salary, y: userLow.credit, size: 4},
     //   {x: userMid.salary, y: userMid.credit, size: 4},
     //   {x: userHigh.salary, y: userHigh.credit, size: (userHigh.flag ? 30 : 4)}
     // ]
     return(
-      <XYPlot className="mx-auto" height={400} width={400}>
-        <VerticalGridLines />
-        <HorizontalGridLines />
-        <XAxis position="middle" tickTotal="5" title="Annual Income"/>
-        <YAxis position="middle" title="Estimated Tax Credit"/>
-        <LineMarkSeries data={mainData} getNull={(d) => d.y !== null && d.x !== null} sizeRange={ (userHigh.flag ? [5, 15] : null) } curve={'curveMonotoneX'} />
-        <LineMarkSeries data={subData} strokeStyle="dashed" opacity="0.3" sizeRange={null} curve={'curveMonotoneX'} />
-        <Hint
-          value={{x: this.props.subGraph[2].salary, y: this.props.subGraph[2].credit}}
-          align={{horizontal: 'right', vertical: 'top'}}
-          // style={{"font-weight": "bolder"}}
-        >
-          <div className="custom-hint text-white">
-            Harris' Policy Benefits
-          </div>
-        </Hint>
-        {/* <MarkSeries
-          strokeWidth={2}
-          opacity="0.8"
-          sizeRange={ (userHigh.flag ? [5, 15] : null) }
-          data={markData}
-        /> */}
-        {this.renderHint()}
-      </XYPlot>
+      <React.Fragment>
+        <XYPlot className="mx-auto" height={400} width={400}>
+          <VerticalGridLines />
+          <HorizontalGridLines />
+          <XAxis position="middle" tickTotal="5" title="Annual Income"/>
+          <YAxis position="middle" title="Estimated Tax Credit"/>
+          <LineMarkSeries data={mainData} getNull={(d) => d.y !== null && d.x !== null} sizeRange={ (userHigh.flag ? [5, 10] : null) } curve={'curveMonotoneX'} />
+          <LineMarkSeries data={subData} strokeStyle="dashed" opacity="0.3" sizeRange={null} curve={'curveMonotoneX'} />
+          {/* <Hint
+            value={{x: this.props.subGraph[2].salary, y: this.props.subGraph[2].credit}}
+            align={{horizontal: 'right', vertical: 'top'}}
+            // style={{"font-weight": "bolder"}}
+          >
+            <div className="custom-hint text-white">
+              Harris' Policy Benefits
+            </div>
+          </Hint> */}
+          {/* <MarkSeries
+            strokeWidth={2}
+            opacity="0.8"
+            sizeRange={ (userHigh.flag ? [5, 15] : null) }
+            data={markData}
+          /> */}
+          {this.renderHint()}
+        </XYPlot>
+        <Row>
+          <DiscreteColorLegend orientation="horizontal" width={400} items={ITEMS} className="col text-white"/>
+        </Row>
+      </React.Fragment>
     )
   }
 }
