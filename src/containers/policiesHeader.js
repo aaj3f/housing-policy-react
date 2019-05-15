@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import UseEstimator from '../components/useEstimator'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { Textfit } from 'react-textfit'
 
 class PoliciesHeader extends Component {
@@ -26,42 +25,42 @@ class PoliciesHeader extends Component {
             <h3 className="text-secondary mb-0">Your Data</h3>
             <h2 className="mx-auto mb-5">Info About Your Area Retrieved from<br/>The Dept of HUD & the US Census Bureau</h2>
           </div>
-          <div class="row">
-            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-              <span class="service-icon rounded-circle mx-auto mb-3 px-2">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
+              <span className="service-icon rounded-circle mx-auto mb-3 px-2">
                 <Textfit mode="single">${displayFmr}</Textfit>
               </span>
               <h4>
                 <strong>Fair Market Rent</strong>
               </h4>
-              <p class="text-faded mb-0">for a {this.props.user.bedrooms}-bedroom unit</p>
+              <p className="text-faded mb-0">for a {this.props.user.bedrooms}-bedroom unit</p>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <span class="service-icon rounded-circle mx-auto mb-3 px-2">
+            <div className="col-lg-3 col-md-6">
+              <span className="service-icon rounded-circle mx-auto mb-3 px-2">
                 <Textfit mode="single">${displayRentCost}</Textfit>
               </span>
               <h4>
                 <strong>Your Rent Cost</strong>
               </h4>
-              <p class="text-faded mb-0">{compareRent()}</p>
+              <p className="text-faded mb-0">{compareRent()}</p>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-              <span class="service-icon rounded-circle mx-auto mb-3 px-2">
+            <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
+              <span className="service-icon rounded-circle mx-auto mb-3 px-2">
                 <Textfit mode="single">${displayMedianIncome}</Textfit>
               </span>
               <h4>
                 <strong>Median Income</strong>
               </h4>
-              <p class="text-faded mb-0">for the {this.props.user.zipcode} area</p>
+              <p className="text-faded mb-0">for the {this.props.user.zipcode} area</p>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-              <span class="service-icon rounded-circle mx-auto mb-3 px-2">
+            <div className="col-lg-3 col-md-6 mb-5 mb-md-0">
+              <span className="service-icon rounded-circle mx-auto mb-3 px-2">
                 <Textfit mode="single">${displaySalary}</Textfit>
               </span>
               <h4>
                 <strong>Your Income</strong>
               </h4>
-              <p class="text-faded mb-0">{compareIncome()}</p>
+              <p className="text-faded mb-0">{compareIncome()}</p>
             </div>
           </div>
         </div>

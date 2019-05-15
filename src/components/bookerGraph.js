@@ -15,7 +15,7 @@ class BookerGraph extends Component {
         <Hint
         value={{x: this.props.mainGraph[2].salary, y: this.props.mainGraph[2].credit}}
         align={{horizontal: 'right', vertical: 'top'}}
-        style={{"font-weight": "bolder"}}
+        style={{ fontWeight: "bolder"}}
       >
         <div className="custom-hint text-white">
           This is you!
@@ -66,14 +66,14 @@ class BookerGraph extends Component {
         <XYPlot className="mx-auto" height={400} width={400}>
           <VerticalGridLines />
           <HorizontalGridLines />
-          <XAxis position="middle" tickTotal="5" title="Annual Income"/>
+          <XAxis position="middle" tickTotal={5} title="Annual Income"/>
           <YAxis position="middle" title="Estimated Tax Credit"/>
           <LineMarkSeries data={mainData} getNull={(d) => d.y !== null && d.x !== null} sizeRange={ (userHigh.flag ? [5, 10] : null) } curve={'curveMonotoneX'} />
           <LineMarkSeries data={subData} strokeStyle="dashed" opacity="0.3" sizeRange={null} curve={'curveMonotoneX'} />
           {/* <Hint
             value={{x: this.props.subGraph[2].salary, y: this.props.subGraph[2].credit}}
             align={{horizontal: 'right', vertical: 'top'}}
-            // style={{"font-weight": "bolder"}}
+            // style={{ fontWeight: "bolder"}}
           >
             <div className="custom-hint text-white">
               Harris' Policy Benefits

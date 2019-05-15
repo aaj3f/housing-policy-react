@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import UserData from '../components/userData'
-import LoadingDisplay from '../components/loadingDisplay'
 
 class UserContainer extends Component {
 

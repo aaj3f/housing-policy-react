@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import PoliciesFooter from './policiesFooter'
 import { Link } from "react-router-dom";
 
 class PoliciesBody extends Component {

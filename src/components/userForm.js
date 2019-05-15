@@ -86,7 +86,7 @@ class UserForm extends Component {
 
   displayNum = num => num.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
-  calculateNum = string => string.replace(/\,/g, '')
+  calculateNum = string => string.replace(/,/g, '')
 
   handleBlur = event => {
     const name = event.target.name;
