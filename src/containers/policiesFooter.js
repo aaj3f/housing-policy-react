@@ -45,7 +45,7 @@ class PoliciesFooter extends Component {
           <div className="content-section-heading">
             <h3 id="footer-secondary" className="mb-0">Policy Info</h3>
             {this.renderH2()}
-            <div className="content-section-heading">
+            <div className="content-section-heading mb-5">
               <Row>
                 <Col sm={12} lg={6} className="mb-5">
                   {this.renderGraph()}
@@ -57,6 +57,7 @@ class PoliciesFooter extends Component {
                 </Col>
               </Row>
             </div>
+            <button onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth'})} className="btn btn-xl btn-light">Scroll to Top</button>
           </div>
         </div>
       </section>
