@@ -63,7 +63,7 @@ class HarrisGraph extends Component {
     // ]
     return(
       <React.Fragment>
-        <XYPlot className="mx-auto" height={400} width={350}>
+        <XYPlot className="mx-auto" height={400} width={window.visualViewport.width - 30}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis position="middle" tickTotal={5} title="Annual Income"/>
