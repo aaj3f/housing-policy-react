@@ -21,7 +21,7 @@
     "simple-line-icons": "^2.4.1"
   },
   "resolutions": {
-    "babel-jest": "24.8.0"
+    "babel-jest": "24.7.1"
   },
   "scripts": {
     "start": "react-scripts start",
