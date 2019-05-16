@@ -1,7 +1,7 @@
 const createUser = (state) => {
   return dispatch => {
     dispatch({ type: "CREATING_USER" });
-    return fetch('/users', {
+    return fetch('https://housing-policy-rails.herokuapp.com/users', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
