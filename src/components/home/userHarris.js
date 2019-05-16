@@ -3,24 +3,6 @@ import { Link } from 'react-router-dom'
 
 class UserHarris extends Component {
 
-    scrollViewportDown() {
-      setTimeout(() => {
-        document.querySelector('#portfolio').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth'})
-      }, 500)
-    }
-
-    componentDidUpdate() {
-      if (!this.props.loading) {
-        this.scrollViewportDown()
-      }
-    }
-
-    componentDidMount() {
-      if (!this.props.loading) {
-        this.scrollViewportDown()
-      }
-    }
-
   renderH2 = () => {
     if (this.props.user.harrisCredit) {
       return(<h2 className="sub-caption">You Would Qualify!</h2>)
