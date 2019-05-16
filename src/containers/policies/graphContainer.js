@@ -6,19 +6,6 @@ import HarrisGraph from '../../components/policies/harrisGraph'
 
 class GraphContainer extends Component {
 
-  scrollViewportDown() {
-    setTimeout(() => {
-      document.querySelector('#policies-footer').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth'})
-    }, 500)
-  }
-
-  componentDidMount() {
-    this.scrollViewportDown()
-  }
-
-  componentDidUpdate() {
-    this.scrollViewportDown()
-  }
 
   renderGraph = () => {
     switch (this.props.match.params.policyId) {

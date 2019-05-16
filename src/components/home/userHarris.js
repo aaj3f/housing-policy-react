@@ -14,7 +14,6 @@ class UserHarris extends Component {
   renderP = () => {
     if (this.props.user.harrisCredit) {
       return(
-        // <p className="mb-0">Kamala Harris' proposed policy would provide you with an annual tax credit of<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(this.props.user.harrisCredit) * 12}<br/>to help make the cost of rent more affordable for you.</p>
         <p className="mb-0">Harris' policy tries to keep the price of rent affordable by offering you an estimated tax credit of:<br/><br/><span className="emphatic-font">${Math.round(this.props.user.harrisCredit)} / Year</span><br/><br/>Click here to learn more</p>
       )
     } else {

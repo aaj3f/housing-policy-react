@@ -6,6 +6,21 @@ import { Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 
 class PoliciesFooter extends Component {
+  
+
+  scrollViewportDown() {
+    setTimeout(() => {
+      document.querySelector('#policies-footer').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth'})
+    }, 500)
+  }
+
+  componentDidMount() {
+    this.scrollViewportDown()
+  }
+
+  componentDidUpdate() {
+    this.scrollViewportDown()
+  }
 
   renderH2 = () => {
     let h2

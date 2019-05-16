@@ -7,12 +7,6 @@ import createUser from '../../actions/createUser'
 import { Container, Form, InputGroup, Row, Col } from 'react-bootstrap'
 import zipObject from '../../zipcodes'
 
-// const schema = yup.object({
-//   zipcode: yup.string().length(5).required(),
-//   salary: yup.string().required(),
-//   rent_cost: yup.string().required(),
-//   utilities: yup.string()
-// })
 
 class UserForm extends Component {
   state = {
