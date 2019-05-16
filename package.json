@@ -17,6 +17,7 @@
     "react-textfit": "^1.1.0",
     "react-vis": "^1.11.7",
     "redux": "^4.0.1",
+    "redux-form": "^8.2.0",
     "redux-thunk": "^2.3.0",
     "simple-line-icons": "^2.4.1"
   },
