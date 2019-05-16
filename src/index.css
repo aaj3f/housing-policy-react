@@ -272,6 +272,10 @@ div.policies-selection {
 }
 
 @media (max-width: 576px) {
+  #portfolio {
+    min-height: 200vh;
+  }
+
   #about {
     padding: 1.5em 1em;
   }

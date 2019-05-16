@@ -6,20 +6,6 @@ import UserHarris from './userHarris'
 
 class UserData extends Component {
 
-  // scrollViewportDown() {
-  //   setTimeout(() => {
-  //     document.querySelector('#portfolio').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth'})
-  //   }, 1000)
-  // }
-  //
-  // componentDidMount() {
-  //   this.scrollViewportDown();
-  // }
-  //
-  // componentDidUpdate() {
-  //   this.scrollViewportDown();
-  // }
-
   render() {
     return(
       <div className="row no-gutters">
