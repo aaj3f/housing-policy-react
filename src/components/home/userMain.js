@@ -14,7 +14,7 @@ class UserMain extends Component {
       p3 = (!!harrisCredit ? <p className="mb-1">Kamala Harris' Policy</p> : null)
     } else {
       h2 = <h2>You Don't Seem to Qualify for Benefits Under Any of the Proposed Policies...</h2>
-      p1 = <p className="mb-1">You can learn more about the policies & their eligibility conditions by clicking on them here.</p>
+      p1 = <p className="mb-1">You can learn more about the policies & your eligibility by clicking on them here.</p>
     }
     return(
       <span className="caption-content main-caption">
