@@ -27,7 +27,7 @@ class UserHarris extends Component {
     return(
       <div className="col-lg-6">
         <Link to='/policies/harris' className="portfolio-item">
-          <span className="caption">
+          <span className="caption" id="harris-caption-span">
             <span className="caption-content">
               {this.renderH2()}
               {this.renderP()}
