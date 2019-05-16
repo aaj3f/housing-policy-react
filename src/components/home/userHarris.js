@@ -5,35 +5,35 @@ class UserHarris extends Component {
 
   renderH2 = () => {
     if (this.props.user.harrisCredit) {
-      return(<h2 className="sub-caption" style={{ minHeight: "1px" }}>You Would Qualify!</h2>)
+      return(<h2 className="sub-caption">You Would Qualify!</h2>)
     } else {
-      return(<h2 className="sub-caption" style={{ minHeight: "1px" }}>You Don't Seem to Qualify</h2>)
+      return(<h2 className="sub-caption">You Don't Seem to Qualify</h2>)
     }
   }
 
   renderP = () => {
     if (this.props.user.harrisCredit) {
       return(
-        <p className="mb-0" style={{ minHeight: "1px" }}>Harris' policy tries to keep the price of rent affordable by offering you an estimated tax credit of:<br/><br/><span className="emphatic-font">${Math.round(this.props.user.harrisCredit)} / Year</span><br/><br/>Click here to learn more</p>
+        <p className="mb-0">Harris' policy tries to keep the price of rent affordable by offering you an estimated tax credit of:<br/><br/><span className="emphatic-font">${Math.round(this.props.user.harrisCredit)} / Year</span><br/><br/>Click here to learn more</p>
       )
     } else {
       return(
-        <p className="mb-0" style={{ minHeight: "1px" }}><br/>Harris' policy only provides benefits for those earning less than $100k/yr (or $125k in certain metro areas)<br/><br/>To learn why else you might not qualify, click here</p>
+        <p className="mb-0"><br/>Harris' policy only provides benefits for those earning less than $100k/yr (or $125k in certain metro areas)<br/><br/>To learn why else you might not qualify, click here</p>
       )
     }
   }
 
   render() {
     return(
-      <div className="col-lg-6" style={{ minHeight: "1px" }}>
-        <Link to='/policies/harris' className="portfolio-item" style={{ minHeight: "1px" }}>
-          <span className="caption" id="harris-caption-span" style={{ minHeight: "1px" }}>
-            <span className="caption-content" style={{ minHeight: "1px" }}>
+      <div className="col-lg-6 clearfix">
+        <Link to='/policies/harris' className="portfolio-item clearfix">
+          <span className="caption clearfix" id="harris-caption-span">
+            <span className="caption-content clearfix">
               {this.renderH2()}
               {this.renderP()}
             </span>
           </span>
-          <img className="img-fluid" src={require("../../img/harris.jpg")} alt="" style={{ minHeight: "1px" }}/>
+          <img className="img-fluid" src={require("../../img/harris.jpg")} alt=""/>
         </Link>
       </div>
     )
