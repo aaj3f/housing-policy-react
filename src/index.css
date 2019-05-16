@@ -308,6 +308,10 @@ div.policies-selection {
   div.form-bottom-button {
     margin-top: 1em;
   }
+
+  .col-lg-6 {
+    min-height: 209px;
+  }
 }
 
 /* Side Menu */

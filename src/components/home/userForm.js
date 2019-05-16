@@ -108,7 +108,7 @@ class UserForm extends Component {
               <Form.Group controlId="zipcode" className="user-form-input-col">
                 <Form.Label>Zip Code</Form.Label>
                 <Form.Control
-                  type="text"
+                  type="number"
                   name="zipcode"
                   className={this.state.formErrors.zipcode ? (this.state.validations.zipcodeValid ? 'is-valid' : 'is-invalid') : ''}
                   placeholder="Enter your zip code here..."
@@ -131,7 +131,7 @@ class UserForm extends Component {
                     <InputGroup.Text id="SalaryPrepend">$</InputGroup.Text>
                   </InputGroup.Prepend>
                   <Form.Control
-                    type="text"
+                    type="number"
                     name="salary"
                     className={this.state.formErrors.salary ? (this.state.validations.salaryValid ? 'is-valid' : 'is-invalid') : ''}
                     placeholder="Annual Income (before taxes)..."
@@ -156,7 +156,7 @@ class UserForm extends Component {
                     <InputGroup.Text id="RentCostPrepend">$</InputGroup.Text>
                   </InputGroup.Prepend>
                   <Form.Control
-                    type="text"
+                    type="number"
                     name="rent_cost"
                     className={this.state.formErrors.rent_cost ? (this.state.validations.rent_costValid ? 'is-valid' : 'is-invalid') : ''}
                     placeholder="Ex. 800"
@@ -177,7 +177,7 @@ class UserForm extends Component {
                     <InputGroup.Text id="UtilitiesPrepend">$</InputGroup.Text>
                   </InputGroup.Prepend>
                   <Form.Control
-                    type="text"
+                    type="number"
                     name="utilities"
                     className={this.state.formErrors.utilities ? (this.state.validations.utilitiesValid ? 'is-valid' : 'is-invalid') : ''}
                     placeholder="(water, electric, etc.)"
