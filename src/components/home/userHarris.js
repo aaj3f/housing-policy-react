@@ -42,7 +42,7 @@ class UserHarris extends Component {
               {this.renderContent()}
             </span>
           </span>
-          <img className="img-fluid" src={require("../../img/harris.jpg")} alt=""/>
+          <img className="img-fluid" src={require("../../img/harris.jpg")} alt="" style={{ width: "100%" }}/>
         </Link>
       </div>
     )
