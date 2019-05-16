@@ -13,7 +13,6 @@ class UserData extends Component {
         <UserWarren user={this.props.user} />
         <UserBooker user={this.props.user} />
         <UserHarris user={this.props.user} />
-        <div id="bottom-el"></div>
       </div>
     )
   }
