@@ -2,7 +2,7 @@ const fetchPolicies = (user) => {
   return dispatch => {
     dispatch({ type: "LOADING_POLICY_DATA" });
     // console.log(user)
-    return fetch(`/users/${user.id}`, {
+    return fetch(`https://housing-policy-rails.herokuapp.com/users/${user.id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
