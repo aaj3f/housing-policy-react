@@ -2,6 +2,9 @@
   "name": "housing-policy-react",
   "version": "0.1.0",
   "private": true,
+  "engine": {
+    "node": "11.14.0"
+  },
   "dependencies": {
     "babel-jest": "^24.7.1",
     "bootstrap": "^4.3.1",
