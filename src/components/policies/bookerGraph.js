@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Row } from 'react-bootstrap'
 import '../../../node_modules/react-vis/dist/style.css';
-import {XYPlot, LineMarkSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, Hint, DiscreteColorLegend} from 'react-vis';
+import {XYPlot, makeWidthFlexible, LineMarkSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, Hint, DiscreteColorLegend} from 'react-vis';
+
+const FlexibleXYPlot = makeWidthFlexible(XYPlot)
+const FlexibleColorLegend = makeWidthFlexible(DiscreteColorLegend)
 
 class BookerGraph extends Component {
 
@@ -26,6 +29,7 @@ class BookerGraph extends Component {
       return null
     }
   }
+
 
   render() {
     // debugger;
@@ -63,7 +67,7 @@ class BookerGraph extends Component {
     // ]
     return(
       <React.Fragment>
-        <XYPlot className="mx-auto" height={400} width={window.visualViewport.width - 30}>
+        <FlexibleXYPlot className="mx-auto" height={400}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis position="middle" tickTotal={5} title="Annual Income"/>
@@ -86,9 +90,9 @@ class BookerGraph extends Component {
             data={markData}
           /> */}
           {this.renderHint()}
-        </XYPlot>
+        </FlexibleXYPlot>
         <Row>
-          <DiscreteColorLegend orientation="horizontal" width={400} items={ITEMS} className="col text-white"/>
+          <FlexibleColorLegend orientation="horizontal" items={ITEMS} className="col text-white"/>
         </Row>
       </React.Fragment>
     )
