@@ -19,7 +19,7 @@
 const fetchPolicies = (user) => {
   return dispatch => {
     dispatch({ type: "LOADING_POLICY_DATA" });
-    console.log(user)
+    // console.log(user)
     return fetch(`/users/${user.id}`, {
       method: "GET",
       headers: {
@@ -27,7 +27,7 @@ const fetchPolicies = (user) => {
       }
     }).then(resp => resp.json())
       .then(json => {
-        console.log(json)
+        // console.log(json)
         dispatch({ type: "LOADED_POLICY", payload: json })
       })
   }

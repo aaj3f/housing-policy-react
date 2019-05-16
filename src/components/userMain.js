@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class UserMain extends Component {
 
   renderMain = () => {
-    console.log(this.props.user)
+    // console.log(this.props.user)
     let { warren, bookerCredit, harrisCredit } = this.props.user
     let h2, p1, p2, p3
     if ([warren, bookerCredit, harrisCredit].some(value => !!value)) {

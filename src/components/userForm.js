@@ -96,11 +96,7 @@ class UserForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state)
-    // const form = event.currentTarget;
-    // if (form.checkValidity() === false) {
-    //   event.stopPropagation();
-    // }
+    // console.log(this.state)
     if (Object.values(this.state.validations).every(value => value === true) && Object.values(this.state.user).every(value => value.length > 0)) {
       this.props.createUser(this.state);
       this.setState({ user: { zipcode: '', salary: '', rent_cost: '', utilities: '', bedrooms: ''}, formErrors: {zipcode: '', salary: '', rent_cost: '', utilities: ''}, valid: true })
@@ -108,13 +104,7 @@ class UserForm extends Component {
       this.setState({ ...this.state, valid: false })
     }
   }
-  //
-  // onBlur = ({
-  //   zipcode: (event) => {
-  //     if (this.state.user.zipcode.match)
-  //   }
-  // })
-
+  
   render() {
     return(
       <Container id="formContainer">
