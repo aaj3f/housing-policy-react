@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { Image } from 'react-bootstrap'
 
 class UserHarris extends Component {
 
@@ -42,7 +43,7 @@ class UserHarris extends Component {
               {this.renderContent()}
             </span>
           </span>
-          <img className="img-fluid" src={require("../../img/harris.jpg")} alt="" style={{ width: "100%" }}/>
+          <Image fluid src={require("../../img/harris.jpg")} alt=""/>
         </Link>
       </div>
     )
