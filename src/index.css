@@ -300,6 +300,7 @@ div.policies-selection {
 
   .masthead {
     padding-top: 2em;
+    position: absolute;
   }
 
   div.user-form-input-col {
