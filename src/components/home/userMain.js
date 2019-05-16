@@ -33,7 +33,7 @@ class UserMain extends Component {
           <span className="caption">
           {this.renderMain()}
           </span>
-          <img className="img-fluid" src={require("../img/american-sticker.jpg")} alt="US Congress - Housing Policy" />
+          <img className="img-fluid" src={require("../../img/american-sticker.jpg")} alt="US Congress - Housing Policy" />
         </Link>
       </div>
     )

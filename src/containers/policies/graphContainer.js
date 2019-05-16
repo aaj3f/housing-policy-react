@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import WarrenGraph from '../components/warrenGraph'
-import BookerGraph from '../components/bookerGraph'
-import HarrisGraph from '../components/harrisGraph'
+import WarrenGraph from '../../components/policies/warrenGraph'
+import BookerGraph from '../../components/policies/bookerGraph'
+import HarrisGraph from '../../components/policies/harrisGraph'
 
 class GraphContainer extends Component {
 

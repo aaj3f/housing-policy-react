@@ -34,7 +34,7 @@ class UserHarris extends Component {
               {this.renderP()}
             </span>
           </span>
-          <img className="img-fluid" src={require("../img/harris.jpg")} alt="" />
+          <img className="img-fluid" src={require("../../img/harris.jpg")} alt="" />
         </Link>
       </div>
     )

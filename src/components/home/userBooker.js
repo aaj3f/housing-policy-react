@@ -34,7 +34,7 @@ class UserBooker extends Component {
               {this.renderP()}
             </span>
           </span>
-          <img className="img-fluid" src={require("../img/booker.jpg")} alt="" />
+          <img className="img-fluid" src={require("../../img/booker.jpg")} alt="" />
         </Link>
       </div>
     )

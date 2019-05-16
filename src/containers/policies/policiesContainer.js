@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import PoliciesHeader from './policiesHeader'
 import PoliciesBody from './policiesBody'
 import PoliciesFooter from './policiesFooter'
-import ScrollToTop from '../components/scrollToTop'
-import fetchPolicies from '../actions/fetchPolicies'
+import ScrollToTop from '../../components/scrollToTop'
+import fetchPolicies from '../../actions/fetchPolicies'
 import { Route } from 'react-router-dom'
 
 class PoliciesContainer extends Component {

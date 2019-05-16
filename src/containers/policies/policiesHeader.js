@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import UseEstimator from '../components/useEstimator'
+import UseEstimator from '../../components/policies/useEstimator'
 import { connect } from 'react-redux'
 import { Textfit } from 'react-textfit'
 

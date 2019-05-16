@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import FormHeader from '../components/formHeader'
-import UserForm from '../components/userForm'
-import LoadingDisplay from '../components/loadingDisplay'
+import FormHeader from '../../components/home/formHeader'
+import UserForm from '../../components/home/userForm'
+import LoadingDisplay from '../../components/home/loadingDisplay'
 
 class FormContainer extends Component {
 

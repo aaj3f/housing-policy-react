@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import FormContainer from './formContainer'
 import UserContainer from './userContainer'
-import Error from '../components/error'
-import ScrollToTop from '../components/scrollToTop'
+import Error from '../../components/home/error'
+import ScrollToTop from '../../components/scrollToTop'
 
 class Home extends Component {
   render() {

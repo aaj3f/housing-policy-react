@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import UserData from '../components/userData'
+import UserData from '../../components/home/userData'
 
 class UserContainer extends Component {
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import UseEstimator from '../components/useEstimator'
+import UseEstimator from '../../components/policies/useEstimator'
 import GraphContainer from './graphContainer'
 import PolicySummary from './policySummary'
 import { Row, Col } from 'react-bootstrap'

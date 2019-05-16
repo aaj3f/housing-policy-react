@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Row } from 'react-bootstrap'
-import '../../node_modules/react-vis/dist/style.css';
-import {XYPlot, LineMarkSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, Hint, DiscreteColorLegend } from 'react-vis';
+import '../../../node_modules/react-vis/dist/style.css';
+import {XYPlot, LineMarkSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, Hint, DiscreteColorLegend} from 'react-vis';
 
-class HarrisGraph extends Component {
+class BookerGraph extends Component {
 
   componentDidMount() {
 
@@ -47,8 +47,8 @@ class HarrisGraph extends Component {
     ]
 
     const ITEMS = [
-      {title: 'Harris\' Policy Benefits', strokeWidth: 4, opacity: 1},
-      {title: 'Booker\'s Policy Benefits', strokeWidth: 4, strokeStyle: "dashed", opacity: "0.3"}
+      {title: 'Booker\'s Policy Benefits', strokeWidth: 4, opacity: 1},
+      {title: 'Harris\' Policy Benefits', strokeWidth: 4, strokeStyle: "dashed", opacity: "0.3"}
       // {title: 'Dots', color: 'url(#circles)', strokeWidth: 9},
       // {title: 'Stripes', color: 'url(#stripes)'},
       // {title: 'Wide stripes', color: 'url(#stripes)', strokeWidth: 13},
@@ -70,6 +70,15 @@ class HarrisGraph extends Component {
           <YAxis position="middle" title="Estimated Tax Credit"/>
           <LineMarkSeries data={mainData} getNull={(d) => d.y !== null && d.x !== null} sizeRange={ (userHigh.flag ? [5, 10] : null) } curve={'curveMonotoneX'} />
           <LineMarkSeries data={subData} strokeStyle="dashed" opacity="0.3" sizeRange={null} curve={'curveMonotoneX'} />
+          {/* <Hint
+            value={{x: this.props.subGraph[2].salary, y: this.props.subGraph[2].credit}}
+            align={{horizontal: 'right', vertical: 'top'}}
+            // style={{ fontWeight: "bolder"}}
+          >
+            <div className="custom-hint text-white">
+              Harris' Policy Benefits
+            </div>
+          </Hint> */}
           {/* <MarkSeries
             strokeWidth={2}
             opacity="0.8"
@@ -86,4 +95,4 @@ class HarrisGraph extends Component {
   }
 }
 
-export default HarrisGraph
+export default BookerGraph

@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 // import * as yup from 'yup';
 import { connect } from 'react-redux'
 // import { Field, reduxForm } from 'redux-form'
-import createUser from '../actions/createUser'
+import createUser from '../../actions/createUser'
 import { Container, Form, InputGroup, Row, Col } from 'react-bootstrap'
-import zipObject from '../zipcodes'
+import zipObject from '../../zipcodes'
 
 // const schema = yup.object({
 //   zipcode: yup.string().length(5).required(),
@@ -104,7 +104,7 @@ class UserForm extends Component {
       this.setState({ ...this.state, valid: false })
     }
   }
-  
+
   render() {
     return(
       <Container id="formContainer">

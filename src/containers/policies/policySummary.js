@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import WarrenSummary from '../components/warrenSummary'
-import BookerSummary from '../components/bookerSummary'
-import HarrisSummary from '../components/harrisSummary'
+import WarrenSummary from '../../components/policies/warrenSummary'
+import BookerSummary from '../../components/policies/bookerSummary'
+import HarrisSummary from '../../components/policies/harrisSummary'
 import { Route } from 'react-router-dom'
 
 class PolicySummary extends Component {

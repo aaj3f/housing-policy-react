@@ -5,9 +5,9 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import './index.css';
 import App from './App';
-import About from './containers/about';
+import About from './containers/about/about';
 import NavBar from './containers/navbar';
-import PoliciesContainer from './containers/policiesContainer'
+import PoliciesContainer from './containers/policies/policiesContainer'
 import rootReducer from './reducers/index'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
