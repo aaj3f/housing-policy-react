@@ -70,7 +70,7 @@ class HarrisGraph extends Component {
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis position="middle" tickFormat={v => `$${Math.floor(v / 1000)}k`} tickTotal={5} title="Annual Income"/>
-          <YAxis position="middle" title="Estimated Tax Credit"/>
+          <YAxis position="middle" tickFormat={v => `$${v}`} title="Estimated Tax Credit"/>
           <LineMarkSeries data={mainData} getNull={(d) => d.y !== null && d.x !== null} sizeRange={ (userHigh.flag ? [5, 10] : null) } curve={'curveMonotoneX'} />
           <LineMarkSeries data={subData} strokeStyle="dashed" opacity="0.3" sizeRange={null} curve={'curveMonotoneX'} />
           {/* <MarkSeries
