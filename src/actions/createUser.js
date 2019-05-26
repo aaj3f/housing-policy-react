@@ -8,7 +8,6 @@ const createUser = (state) => {
       },
       body: JSON.stringify(state)
     }).then(resp => {
-        console.log(resp.json())
         if (!resp.ok) {
           throw Error(resp.json());
         } else {
